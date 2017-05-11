@@ -1,1 +1,1 @@
-# Folder including the answers of Kirk Buyers' Python curse
+# Folder including the answers of Kirk Byers' Python curse
