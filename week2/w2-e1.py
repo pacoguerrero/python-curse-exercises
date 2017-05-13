@@ -7,11 +7,16 @@ IPv4_net_str = raw_input("Please enter a /24 network:\n")
 
 IPv4_net_octets = IPv4_net_str.split(".")
 
+#if last element is [], it is removed
+first_length = len(IPv4_net_octets)
+if IPv4_net_octets[first_length-1] == '':
+    IPv4_net_octets.pop()
+    
 length = len(IPv4_net_octets)
 
 if ( length < 3 ) | (length > 4):
     print "The IP network is no valid"
-elif (length == 4) & (IPv4_net_octets[3] != '0'):
+elif (length == 4) & (IPv4_net_octets[length-1] != '0'):
     print "The last octet is not zero"
 else:
     
